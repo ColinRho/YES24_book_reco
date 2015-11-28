@@ -1,0 +1,21 @@
+---
+title: "솔루션 결과"
+output: html_document
+---
+
+다음은 임의의 5개 샘플에 대한 솔루션 결과입니다. 
+
+```{r, echo = F}
+# example result
+
+
+source(file = "source.R", encoding = "UTF-8")
+```
+```{r} 
+
+random_sample <- testee[sample(1:length(testee), 5)]
+
+result <- lapply(random_sample, simple_recommend, category = "자기계발") ; names(result) <- random_sample
+
+result
+```
